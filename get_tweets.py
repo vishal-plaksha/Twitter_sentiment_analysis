@@ -17,10 +17,11 @@ authentication.set_access_token(access_token, access_token_secret)
 api = tweepy.API(authentication, wait_on_rate_limit=True)
 
 def get_related_tweets(text_query):
+    pd.set_option('display.max_colwidth', -1)
     # list to store tweets
     tweets_list = []
     # no of tweets
-    count = 5
+    count = 20
     try:
         # Pulling individual tweets from query
         for tweet in api.search(q=text_query, count=count):

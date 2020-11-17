@@ -1,0 +1,10 @@
+<!doctype html>
+<title>Sentiment analysis</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Sentiment Results</h1>
+  {% for table in tables %}
+
+    {{ table|safe }}
+  {% endfor %}
+</div>
